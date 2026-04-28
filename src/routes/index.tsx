@@ -1,26 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
+import LandingPage from "@/components/landing/LandingPage";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Calculadora de Pesagem de Gado | LeiloApp — Romaneio Automático Offline" },
+      {
+        name: "description",
+        content:
+          "Romaneio automático, média em tempo real, valores por arroba e quilo. Funciona offline no curral com qualquer balança. A partir de R$ 0,77/dia.",
+      },
+      { property: "og:title", content: "Calculadora de Pesagem de Gado | LeiloApp" },
+      {
+        property: "og:description",
+        content:
+          "Romaneio automático e indicadores em tempo real enquanto você pesa. Funciona offline. A partir de R$ 0,77/dia.",
+      },
+      { property: "og:type", content: "website" },
+    ],
+    links: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap",
+      },
+    ],
+  }),
+  component: LandingPage,
 });
-
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
-}
