@@ -241,33 +241,65 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* RECURSOS */}
+      {/* O QUE O APP FAZ */}
       <section className="px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-5xl">
+        <div className="mx-auto max-w-2xl">
           <div className="fade-in mb-10 text-center">
-            <SectionLabel>Funcionalidades</SectionLabel>
+            <SectionLabel>O que o app faz</SectionLabel>
             <h2 className="text-balance text-3xl font-bold sm:text-4xl">
-              Tudo que você precisa, nada que você não usa
+              Tudo acontece <span className="text-gold">enquanto você pesa.</span>
             </h2>
+            <p className="mx-auto mt-4 max-w-xl text-white/70">
+              Não tem planilha depois. Não tem conta de cabeça. O resultado aparece na hora — animal por animal.
+            </p>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="flex flex-col gap-3">
             {[
-              { t: "Não precisa de bluetooth", d: "Funciona com qualquer balança — balanção, varão, digital, coletiva. Você digita o peso manualmente." },
-              { t: "Funciona offline", d: "Sem internet, sem wi-fi, sem problema. Usa no pasto, no curral, onde não pega sinal." },
-              { t: "Romaneio instantâneo", d: "O romaneio vai gerando enquanto você pesa. Acabou o manejo, o documento está pronto." },
-              { t: "Pesagens ficam salvas", d: "Histórico completo no celular. Consulta qualquer pesagem a qualquer momento." },
-              { t: "Pesa por arroba com RC", d: "Rendimento de carcaça incluído. Calcula direto por arroba com o RC que você definir." },
-              { t: "Pesa por kg ou arroba", d: "Você escolhe. Coloca valor por quilo ou por arroba e vê o total calculado na hora." },
-            ].map((f) => (
-              <div key={f.t} className="fade-in rounded-xl border border-white/10 bg-white/[0.06] p-5">
-                <h3 className="mb-2 text-lg font-semibold text-gold">{f.t}</h3>
-                <p className="text-sm text-muted-foreground">{f.d}</p>
+              { t: "Média, mais leve e mais pesado — em tempo real", d: "Cada peso digitado atualiza os indicadores do lote na hora. Não precisa esperar terminar a pesagem para saber o resultado." },
+              { t: "Romaneio pronto antes de sair do curral", d: "O romaneio é gerado durante a pesagem, animal por animal. Acabou de pesar — o documento já está pronto para enviar." },
+              { t: "Valor por arroba e por quilo na hora da negociação", d: "Coloca o preço por arroba ou quilo e define o rendimento. O app calcula valor por cabeça e total do lote automaticamente." },
+              { t: "Funciona offline, com qualquer balança", d: "Sem internet no curral, funciona normal. Balanção, varão, digital, coletiva — não precisa de bluetooth nem de integração nenhuma." },
+              { t: "Histórico de todas as pesagens salvo no celular", d: "Cada pesagem fica registrada. Consulta quando quiser — sem depender de caderno, planilha ou memória." },
+              { t: "Exporta a tabela e envia pro comprador na hora", d: "Terminou o manejo — exporta a tabela completa com pesos, média e valores. Envia pelo WhatsApp ali mesmo, sem retrabalho." },
+            ].map((f, i) => (
+              <div
+                key={f.t}
+                className={`fade-in flex gap-4 rounded-xl border-l-4 border-solution p-5 sm:p-6 ${
+                  i % 2 === 0 ? "bg-white/[0.04]" : "bg-white/[0.07]"
+                }`}
+              >
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-solution/15">
+                  <Check className="h-5 w-5 text-solution" strokeWidth={3} />
+                </div>
+                <div>
+                  <h3 className="mb-1 text-base font-bold text-white sm:text-lg">{f.t}</h3>
+                  <p className="text-sm text-white/65 sm:text-base">{f.d}</p>
+                </div>
               </div>
             ))}
           </div>
-          <p className="fade-in mt-6 text-center text-sm text-muted-foreground">
-            + Média em tempo real · Mais leve e mais pesado · Cabeças contadas · Categorias · Exporta tabela
-          </p>
+
+          <div className="fade-in mt-10">
+            <p className="mb-4 text-center text-xs font-semibold uppercase tracking-widest text-gold">
+              Também incluso
+            </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              {[
+                "Pesa por kg ou arroba com RC",
+                "Cabeças contadas automaticamente",
+                "Recalcula ao mudar o preço",
+                "Celular, tablet ou computador",
+              ].map((p) => (
+                <span
+                  key={p}
+                  className="rounded-full bg-gold/15 px-4 py-2 text-xs font-semibold text-gold sm:text-sm"
+                >
+                  {p}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
