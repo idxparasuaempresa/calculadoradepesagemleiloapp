@@ -489,6 +489,17 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* FAQ — depois da dobra de preços */}
+      <section className="px-5 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="fade-in mb-10 text-center">
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">Dúvidas frequentes</h2>
+          </div>
+          <Faq />
+        </div>
+      </section>
+
       {/* CTA SECUNDÁRIO + FOOTER */}
       <section className="px-5 py-12">
         <div className="mx-auto max-w-md">
