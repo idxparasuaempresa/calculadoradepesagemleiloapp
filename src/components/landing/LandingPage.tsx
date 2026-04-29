@@ -314,7 +314,7 @@ export default function LandingPage() {
           </div>
           <div className="space-y-6">
             {[
-              { n: "01", t: "Abre&nbsp;→ entra em ferramentas → Calculadora Padrão", d: "Nova pesagem, digita o número que saiu na balança e aperta registrar. Pronto." },
+              { n: "01", t: "Abre → entra em ferramentas → Calculadora Padrão", d: "Nova pesagem, digita o número que saiu na balança e aperta registrar. Pronto." },
               { n: "02", t: "Indicadores na hora", d: "Média, mais leve, mais pesado e total de cabeças — tudo aparece em tempo real enquanto você pesa." },
               { n: "03", t: "Romaneio pronto", d: "Acabou de pesar? O romaneio já está pronto. Exporta a tabela e envia pro comprador ali mesmo." },
             ].map((s) => (
