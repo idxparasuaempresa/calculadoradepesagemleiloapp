@@ -350,14 +350,64 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* TABELA COMPLETA DE FUNCIONALIDADES */}
       <section className="px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-4xl">
           <div className="fade-in mb-10 text-center">
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-balance text-3xl font-bold sm:text-4xl">Dúvidas frequentes</h2>
+            <SectionLabel>Tudo que tem dentro</SectionLabel>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
+              Todas as funções do <span className="text-gold">LeiloApp</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              Confira tudo que está incluso desde o primeiro dia.
+            </p>
           </div>
-          <Faq />
+
+          <div className="fade-in overflow-hidden rounded-2xl border border-border bg-white/[0.04]">
+            <table className="w-full text-left text-sm sm:text-base">
+              <thead>
+                <tr className="bg-gold/10 text-gold">
+                  <th className="px-4 py-3 font-bold uppercase tracking-wide sm:px-6 sm:py-4">Função</th>
+                  <th className="px-4 py-3 font-bold uppercase tracking-wide sm:px-6 sm:py-4">O que faz por você</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { f: "Romaneio automático", d: "Gera o documento enquanto você pesa. Acabou o manejo, está pronto." },
+                  { f: "Cálculos sem erro", d: "Soma, média e totais 100% automáticos. Sem refazer conta." },
+                  { f: "Média em tempo real", d: "A média do lote aparece a cada peso registrado." },
+                  { f: "Mais leve e mais pesado", d: "Identifica os extremos do lote na hora." },
+                  { f: "Contagem de cabeças", d: "Mostra quantos animais já passaram pela balança." },
+                  { f: "Pesa por kg ou arroba", d: "Você escolhe a unidade. O valor total sai calculado." },
+                  { f: "Rendimento de carcaça (RC)", d: "Define o RC e calcula direto por arroba." },
+                  { f: "Funciona offline", d: "Sem internet, sem wi-fi, sem sinal. Roda no curral real." },
+                  { f: "Qualquer balança", d: "Balanção, varão, digital, coletiva. Você digita o peso." },
+                  { f: "Histórico salvo", d: "Todas as pesagens guardadas no celular para consulta." },
+                  { f: "Categorias por lote", d: "Separa aparte, faixa de peso, refugo e categoria." },
+                  { f: "Exporta tabela", d: "Envia o romaneio pronto pro comprador ali mesmo." },
+                  { f: "GMD automático", d: "Ganho médio diário calculado por brinco ou por lote." },
+                  { f: "Recálculo instantâneo", d: "Mudou o valor do kg ou arroba? O app recalcula tudo sozinho." },
+                  { f: "Funciona em qualquer aparelho", d: "Celular, tablet ou computador. Sem instalar nada pesado." },
+                  { f: "Suporte direto", d: "Atendimento pela equipe LeiloApp quando precisar." },
+                ].map((row, i) => (
+                  <tr
+                    key={row.f}
+                    className={`border-t border-border ${i % 2 === 1 ? "bg-white/[0.02]" : ""}`}
+                  >
+                    <td className="px-4 py-3 align-top font-semibold sm:px-6 sm:py-4">
+                      <div className="flex items-start gap-2">
+                        <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-solution" />
+                        <span>{row.f}</span>
+                      </div>
+                    </td>
+                    <td className="px-4 py-3 align-top text-muted-foreground sm:px-6 sm:py-4">
+                      {row.d}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
