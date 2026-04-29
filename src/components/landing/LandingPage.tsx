@@ -187,7 +187,7 @@ export default function LandingPage() {
       </section>
 
       {/* SOLUÇÃO + VÍDEO */}
-      <section className="bg-bg-deep px-5 py-16 sm:py-24">
+      <section className="px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <div className="fade-in">
             <SectionLabel>Calculadora de Pesagem LeiloApp</SectionLabel>
