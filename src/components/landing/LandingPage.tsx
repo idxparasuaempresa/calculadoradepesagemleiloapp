@@ -108,8 +108,40 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* COMPARATIVO — segunda dobra: choque visual rápido */}
+      <section className="px-5 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="fade-in mb-10 text-center">
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
+              Caderno na pesagem = <span className="text-pain">prejuízo disfarçado</span>
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              A diferença não está na balança. Está em como você registra.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:gap-5">
+            <div className="fade-in rounded-xl border border-pain/30 bg-pain/10 p-5">
+              <h3 className="mb-4 text-center text-base font-bold uppercase text-pain sm:text-lg">Caderno</h3>
+              <ul className="space-y-3 text-sm sm:text-base">
+                {["Perde dado", "Erra conta", "Refaz tudo", "Perde tempo", "Romaneio amador", "Resultado só no final"].map((x) => (
+                  <li key={x} className="flex items-start gap-2"><X className="mt-0.5 h-4 w-4 flex-shrink-0 text-pain" /><span>{x}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="fade-in rounded-xl border border-solution/30 bg-solution/10 p-5">
+              <h3 className="mb-4 text-center text-base font-bold uppercase text-solution sm:text-lg">LeiloApp</h3>
+              <ul className="space-y-3 text-sm sm:text-base">
+                {["Resultado na hora", "Romaneio automático", "Histórico salvo", "Offline no curral", "Qualquer balança", "Valores na hora"].map((x) => (
+                  <li key={x} className="flex items-start gap-2"><Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-solution" /><span>{x}</span></li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* DOR */}
-      <section className="px-5 py-16 sm:py-24">
+      <section className="bg-bg-deep px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <div className="fade-in text-center">
             <SectionLabel>O problema não é a balança</SectionLabel>
