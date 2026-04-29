@@ -119,119 +119,49 @@ export default function LandingPage() {
               A diferença não está na balança. Está em como você registra.
             </p>
           </div>
-          {(() => {
-            const pares: Array<[string, string]> = [
-              ["Tem que carregar o caderno", "Dados salvos no seu celular — acessa qualquer hora"],
-              ["Erro de cálculo — soma feita na mão", "Cálculos 100% automáticos — sem margem de erro"],
-              ["Tem que esperar acabar a pesagem", "Romaneio gerado durante a pesagem, animal por animal"],
-              ["Retrabalho de calcular tudo depois", "Terminou de pesar — está tudo pronto na hora"],
-              ["Não sabe a média do lote no meio da pesagem", "Média, mais leve e mais pesado em tempo real"],
-              ["Não tem como consultar pesagens antigas", "Histórico completo salvo — consulta quando quiser"],
-              ["Resultado só no final (se não errar)", "Indicadores aparecem a cada animal registrado"],
-              ["Romaneio feito à mão ou na planilha depois", "Romaneio profissional gerado automaticamente"],
-              ["Não calcula valor por arroba/quilo", "Valor por cabeça e total calculados na hora"],
-              ["Precisa refazer tudo se mudar o preço", "Muda o valor — o app recalcula tudo sozinho"],
-              ["Não tem controle de GMD", "GMD calculado automaticamente por brinco ou por lote"],
-              ["Não diferencia categorias no mesmo manejo", "Separa por aparte, faixa de peso, refugo e categoria"],
-              ["Não tem como enviar para o comprador na hora", "Exporta tabela e envia para o comprador ali mesmo"],
-              ["Molha, rasga, perde no campo", "Funciona offline, sem internet, sem perda de dado"],
-              ["Não funciona sem luz/sinal", "Funciona em qualquer balança, em qualquer lugar"],
-            ];
-            // Cores fixas (paleta dor/solução)
-            const painDark = "#7a1020";
-            const painBgA = "#fde8ec";
-            const painBgB = "#fbd9df";
-            const solDark = "#0d3b2e";
-            const solBgA = "#e6f4ec";
-            const solBgB = "#d4ecdd";
-            return (
-              <div className="fade-in overflow-hidden rounded-xl">
-                {/* Desktop / tablet: tabela */}
-                <table className="hidden w-full table-fixed border-collapse sm:table">
-                  <thead>
-                    <tr>
-                      <th
-                        className="w-1/2 px-4 py-3 text-left text-sm font-bold uppercase tracking-wide text-white sm:text-base"
-                        style={{ backgroundColor: painDark }}
-                      >
-                        Caderno
-                      </th>
-                      <th
-                        className="w-1/2 px-4 py-3 text-left text-sm font-bold uppercase tracking-wide text-white sm:text-base"
-                        style={{ backgroundColor: solDark }}
-                      >
-                        LeiloApp
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {pares.map(([dor, sol], i) => (
-                      <tr key={dor}>
-                        <td
-                          className="px-4 py-3 align-top text-sm sm:text-base"
-                          style={{
-                            backgroundColor: i % 2 === 0 ? painBgA : painBgB,
-                            color: painDark,
-                            borderTop: i === 0 ? "none" : "1px solid rgba(122,16,32,0.15)",
-                          }}
-                        >
-                          <div className="flex items-start gap-2">
-                            <X className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: painDark }} />
-                            <span>{dor}</span>
-                          </div>
-                        </td>
-                        <td
-                          className="px-4 py-3 align-top text-sm sm:text-base"
-                          style={{
-                            backgroundColor: i % 2 === 0 ? solBgA : solBgB,
-                            color: solDark,
-                            borderTop: i === 0 ? "none" : "1px solid rgba(13,59,46,0.15)",
-                          }}
-                        >
-                          <div className="flex items-start gap-2">
-                            <Check className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: solDark }} />
-                            <span className="font-medium">{sol}</span>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-
-                {/* Mobile: cards empilhados (dor em cima, solução embaixo) */}
-                <div className="space-y-4 sm:hidden">
-                  {pares.map(([dor, sol]) => (
-                    <div key={dor} className="overflow-hidden rounded-lg shadow-sm">
-                      <div
-                        className="px-4 py-3 text-sm"
-                        style={{ backgroundColor: painBgA, color: painDark }}
-                      >
-                        <div className="mb-1 text-[10px] font-bold uppercase tracking-widest" style={{ color: painDark }}>
-                          Caderno
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <X className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: painDark }} />
-                          <span>{dor}</span>
-                        </div>
-                      </div>
-                      <div
-                        className="px-4 py-3 text-sm"
-                        style={{ backgroundColor: solBgA, color: solDark }}
-                      >
-                        <div className="mb-1 text-[10px] font-bold uppercase tracking-widest" style={{ color: solDark }}>
-                          LeiloApp
-                        </div>
-                        <div className="flex items-start gap-2">
-                          <Check className="mt-0.5 h-4 w-4 flex-shrink-0" style={{ color: solDark }} />
-                          <span className="font-medium">{sol}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+          <div className="fade-in grid gap-4 sm:grid-cols-2">
+            {/* Coluna Caderno */}
+            <div className="rounded-xl border border-pain/30 bg-pain/10 p-6">
+              <div className="mb-4 text-xs font-bold uppercase tracking-widest text-pain">
+                Caderno
               </div>
-            );
-          })()}
+              <ul className="space-y-3 text-sm sm:text-base">
+                {[
+                  "Erro de cálculo na soma feita à mão",
+                  "Romaneio só fica pronto depois da pesagem",
+                  "Não mostra média do lote em tempo real",
+                  "Molha, rasga, perde no campo",
+                  "Sem histórico para consultar depois",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-foreground/90">
+                    <X className="mt-0.5 h-4 w-4 flex-shrink-0 text-pain" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Coluna LeiloApp */}
+            <div className="rounded-xl border border-solution/40 bg-solution/10 p-6">
+              <div className="mb-4 text-xs font-bold uppercase tracking-widest text-solution">
+                LeiloApp
+              </div>
+              <ul className="space-y-3 text-sm sm:text-base">
+                {[
+                  "Cálculos 100% automáticos, sem erro",
+                  "Romaneio gerado durante a pesagem",
+                  "Média, mais leve e mais pesado em tempo real",
+                  "Funciona offline em qualquer balança",
+                  "Histórico salvo para consultar quando quiser",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-foreground">
+                    <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-solution" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
