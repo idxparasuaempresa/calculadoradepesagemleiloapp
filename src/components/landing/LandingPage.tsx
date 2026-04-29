@@ -388,7 +388,7 @@ export default function LandingPage() {
           <div className="fade-in mb-10 text-center">
             <SectionLabel>Tudo que tem dentro</SectionLabel>
             <h2 className="text-balance text-3xl font-bold sm:text-4xl">
-              Todas as funções do <span className="text-gold">LeiloApp</span>
+              Todas as funções da <span className="text-gold">Calculadora de Pesagens</span>
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
               Confira tudo que está incluso desde o primeiro dia.
