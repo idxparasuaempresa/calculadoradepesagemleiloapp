@@ -211,36 +211,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* SOLUÇÃO + VÍDEO */}
-      <section className="px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="fade-in">
-            <SectionLabel>Calculadora de Pesagem LeiloApp</SectionLabel>
-            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
-              O que você faz no papel, faz no app <span className="text-gold">sem erro</span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              Registra o peso, vê os indicadores na hora e sai do curral com o romaneio pronto. Simples assim.
-            </p>
-          </div>
-          <div className="fade-in mx-auto mt-10 max-w-md overflow-hidden rounded-2xl border border-border shadow-2xl">
-            <div className="relative aspect-video w-full">
-              <iframe
-                src="https://www.youtube.com/embed/RO1ISd3-VpY"
-                title="Calculadora de Pesagem LeiloApp"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 h-full w-full"
-              />
-            </div>
-          </div>
-          <p className="fade-in mt-6 text-base font-medium italic text-gold">
-            Será que no papelzinho você consegue tudo isso?
-          </p>
-        </div>
-      </section>
-
       {/* O QUE O APP FAZ */}
       <section className="px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-2xl">
