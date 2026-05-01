@@ -199,9 +199,6 @@ export default function LandingPage() {
                   "Média, mais leve e mais pesado em tempo real",
                   "Funciona offline em qualquer balança",
                   "Histórico salvo para consultar quando quiser",
-                  "Pesa por kg ou arroba com RC calculado",
-                  "Exporta e envia o romaneio no WhatsApp",
-                  "GMD automático por brinco ou por lote",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-2 text-foreground">
                     <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-solution" />
