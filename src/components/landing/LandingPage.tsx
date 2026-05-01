@@ -81,7 +81,7 @@ export default function LandingPage() {
           </div>
           <h1 className="text-balance text-3xl font-bold leading-tight sm:text-5xl">
             Terminou a pesagem e ficou conferindo peso por peso?{" "}
-            <span className="block mt-3 mb-8 text-gold text-3xl sm:text-4xl font-bold uppercase tracking-wide">
+            <span className="block mt-3 mb-8 text-gold text-xl sm:text-3xl font-semibold normal-case tracking-normal">
               Isso acabou.
             </span>
           </h1>
