@@ -108,7 +108,53 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* COMPARATIVO — segunda dobra: choque visual rápido */}
+      {/* DOR */}
+      <section className="bg-bg-deep px-5 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="fade-in text-center">
+            <SectionLabel>O problema não é a balança</SectionLabel>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
+              O prejuízo nasce no <span className="text-pain">registro</span>&nbsp;{"\n"}não no equipamento
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+              Você pesa certo. Mas na hora de anotar, calcular e conferir, tudo dá errado.
+            </p>
+          </div>
+
+          <ul className="fade-in mt-10 space-y-3">
+            {[
+              "Caderninho some no dia que mais precisa, fica no carro, fica em casa",
+              "Erra um número e refaz tudo com o comprador ali esperando",
+              "Resultado só aparece no final e se não bater, vira confusão",
+              "Tempo jogado fora recalculando o que já devia estar pronto",
+              "Romaneio sai amador e dá briga na negociação",
+              "Conta que não bate custa caro e você só descobre depois",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 rounded-lg bg-white/[0.04] p-4">
+                <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-pain" />
+                <span className="text-sm sm:text-base">{item}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="fade-in mt-10 rounded-2xl border-2 border-gold/60 bg-bg-deep p-6 sm:p-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">Caso real</p>
+            <p className="text-base leading-relaxed sm:text-lg">
+              Um produtor pesou 36 bois no papel. A média deu <strong>646 kg</strong>.
+              Na Calculadora LeiloApp, deu <strong>652 kg</strong>.
+              <br />
+              <span className="mt-2 block">Duzentos quilos de diferença no lote.</span>
+              <span className="text-pain font-semibold">A R$ 11,50 o quilo = R$ 2.300 de prejuízo.</span>
+              <br />
+              <span className="mt-2 block text-muted-foreground">
+                O erro não era no peso. Era no cálculo. A calculadora pegou antes de fechar negócio.
+              </span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPARATIVO — choque visual rápido */}
       <section className="px-5 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl">
           <div className="fade-in mb-10 text-center">
@@ -164,52 +210,6 @@ export default function LandingPage() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* DOR */}
-      <section className="bg-bg-deep px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl">
-          <div className="fade-in text-center">
-            <SectionLabel>O problema não é a balança</SectionLabel>
-            <h2 className="text-balance text-3xl font-bold sm:text-4xl">
-              O prejuízo nasce no <span className="text-pain">registro</span>&nbsp;{"\n"}não no equipamento
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              Você pesa certo. Mas na hora de anotar, calcular e conferir, tudo dá errado.
-            </p>
-          </div>
-
-          <ul className="fade-in mt-10 space-y-3">
-            {[
-              "Caderninho some no dia que mais precisa, fica no carro, fica em casa",
-              "Erra um número e refaz tudo com o comprador ali esperando",
-              "Resultado só aparece no final e se não bater, vira confusão",
-              "Tempo jogado fora recalculando o que já devia estar pronto",
-              "Romaneio sai amador e dá briga na negociação",
-              "Conta que não bate custa caro e você só descobre depois",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 rounded-lg bg-white/[0.04] p-4">
-                <X className="mt-0.5 h-5 w-5 flex-shrink-0 text-pain" />
-                <span className="text-sm sm:text-base">{item}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="fade-in mt-10 rounded-2xl border-2 border-gold/60 bg-bg-deep p-6 sm:p-8">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-gold">Caso real</p>
-            <p className="text-base leading-relaxed sm:text-lg">
-              Um produtor pesou 36 bois no papel. A média deu <strong>646 kg</strong>.
-              Na Calculadora LeiloApp, deu <strong>652 kg</strong>.
-              <br />
-              <span className="mt-2 block">Duzentos quilos de diferença no lote.</span>
-              <span className="text-pain font-semibold">A R$ 11,50 o quilo = R$ 2.300 de prejuízo.</span>
-              <br />
-              <span className="mt-2 block text-muted-foreground">
-                O erro não era no peso. Era no cálculo. A calculadora pegou antes de fechar negócio.
-              </span>
-            </p>
           </div>
         </div>
       </section>
