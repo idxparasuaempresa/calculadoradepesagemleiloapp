@@ -352,6 +352,17 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* FAQ — antes da oferta */}
+      <section className="px-5 py-16 sm:py-24">
+        <div className="mx-auto max-w-3xl">
+          <div className="fade-in mb-10 text-center">
+            <SectionLabel>FAQ</SectionLabel>
+            <h2 className="text-balance text-3xl font-bold sm:text-4xl">Dúvidas frequentes</h2>
+          </div>
+          <Faq />
+        </div>
+      </section>
+
       {/* OFERTA */}
       <section className="bg-bg-deep px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl">
@@ -427,17 +438,6 @@ export default function LandingPage() {
           <div className="fade-in mx-auto mt-8 max-w-xl rounded-xl border border-border bg-white/[0.04] p-5 text-center text-sm italic text-muted-foreground">
             Se fosse difícil de mexer, não teria tanta indicação e renovação.
           </div>
-        </div>
-      </section>
-
-      {/* FAQ — depois da dobra de preços */}
-      <section className="px-5 py-16 sm:py-24">
-        <div className="mx-auto max-w-3xl">
-          <div className="fade-in mb-10 text-center">
-            <SectionLabel>FAQ</SectionLabel>
-            <h2 className="text-balance text-3xl font-bold sm:text-4xl">Dúvidas frequentes</h2>
-          </div>
-          <Faq />
         </div>
       </section>
 
